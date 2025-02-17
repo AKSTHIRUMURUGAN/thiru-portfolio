@@ -5,7 +5,7 @@ import { HeroHighlight, Highlight } from "../ui/hero-highlight";
 export  default function HeroHighlightEffect({children}) {
   return (
     (<HeroHighlight>
-      <motion.h1
+      {/* <motion.h1
         initial={{
           opacity: 0,
           y: 20,
@@ -24,7 +24,7 @@ export  default function HeroHighlightEffect({children}) {
         <Highlight className="text-white">
           Startup
         </Highlight>
-      </motion.h1>
+      </motion.h1> */}
       {children}
     </HeroHighlight>)
   );

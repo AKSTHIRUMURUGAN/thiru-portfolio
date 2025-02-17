@@ -4,6 +4,7 @@ import BackgroundBoxes from "../components/aceternity/BackgroundBoxes";
 import ThreeDCard from "../components/aceternity/Card";
 import LetterGlitch from '../components/GlitchBg'
 import VortexEffect from '../components/aceternity/VortexFull'
+import SparklesText from '../components/aceternity/SparkleText'
 
 const Awards = () => {
   const awards = [
@@ -59,6 +60,7 @@ const Awards = () => {
 
   return (
     <VortexEffect>
+      <SparklesText/>
       <ThreeDCard cardData={awards} />
       </VortexEffect>
   );

@@ -226,9 +226,9 @@ const Particles = ({
   return (
     <div
       ref={containerRef}
-      className={`relative w-full  h-screen  ${className}`}
+      className={`absolute top-0 w-full h-full ${className}`}
     >
-        <div className="flex justify-center align-middle">
+        <div className="text-center bg-transparent">
         {children}
         </div>
         </div>

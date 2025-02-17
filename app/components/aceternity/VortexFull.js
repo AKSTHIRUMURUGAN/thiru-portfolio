@@ -4,7 +4,7 @@ import { Vortex } from "../ui/vortex";
 
 export default function VortexEffect({ children }) {
   return (
-    <div className="relative w-full min-h-screen h-full">
+    <div className="relative w-[100vw] min-h-screen h-full">
       {/* Vortex Background */}
       <Vortex
         backgroundColor="black"

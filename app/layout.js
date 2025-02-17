@@ -3,6 +3,7 @@ import { Inter } from "next/font/google"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 import NavbarEffect from './components/aceternity/Navbar'
+import { ScrollProgress } from "./components/magicui/ui/scroll-progress"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
       <body className={`${inter.className} bg-gray-900 text-white`}>
         <NavbarEffect/>
         <main>{children}</main>
+        <ScrollProgress className="z"/>
         <Footer />
       </body>
     </html>

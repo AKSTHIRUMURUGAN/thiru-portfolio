@@ -1,58 +1,46 @@
 "use client";
-import React, { useState } from "react";
-import { MultiStepLoader as Loader } from "../ui/multi-step-loader";
+import React, { useEffect, useState } from "react";
+import { MultiStepLoader } from "../ui/multi-step-loader";
 import { IconSquareRoundedX } from "@tabler/icons-react";
+import { useRouter } from "next/navigation";
 
-const loadingStates = [
-  {
-    text: "Buying a condo",
-  },
-  {
-    text: "Travelling in a flight",
-  },
-  {
-    text: "Meeting Tyler Durden",
-  },
-  {
-    text: "He makes soap",
-  },
-  {
-    text: "We goto a bar",
-  },
-  {
-    text: "Start a fight",
-  },
-  {
-    text: "We like it",
-  },
-  {
-    text: "Welcome to F**** C***",
-  },
-];
-
-export default function MultiStepLoaderEffect() {
+export default function MultiStepLoaderEffect({ loadingStates, text }) {
   const [loading, setLoading] = useState(false);
+
+
+
   return (
-    (<div className="w-full h-[60vh] flex items-center justify-center">
+    <div className="w-full  flex items-center justify-center">
       {/* Core Loader Modal */}
-      <Loader loadingStates={loadingStates} loading={loading} duration={2000} />
-      {/* The buttons are for demo only, remove it in your actual code ⬇️ */}
+      <MultiStepLoader 
+        loadingStates={loadingStates} 
+        loading={loading} // ✅ Corrected
+        duration={2000} 
+        loop={false} 
+        onComplete={() => setLoading(false)} // ✅ Ensure loader stops
+      />
+
+      {/* Start Button */}
       <button
-        onClick={() => setLoading(true)}
-        className="bg-[#39C3EF] hover:bg-[#39C3EF]/90 text-black mx-auto text-sm md:text-base transition font-medium duration-200 h-10 rounded-lg px-8 flex items-center justify-center"
+        onClick={() => { 
+          setLoading(true); 
+        }} 
+        className="bg-[#39C3EF] hover:bg-[#39C3EF]/90 text-white mx-auto text-sm md:text-base transition font-medium duration-200 h-10 rounded-xl px-8"
         style={{
           boxShadow:
             "0px -1px 0px 0px #ffffff40 inset, 0px 1px 0px 0px #ffffff40 inset",
         }}>
-        Click to load
+        {text}
       </button>
+
+      {/* Close Button */}
       {loading && (
         <button
-          className="fixed top-4 right-4 text-black dark:text-white z-[120]"
+          className="fixed top-4 right-4 text-white z-[120]"
           onClick={() => setLoading(false)}>
           <IconSquareRoundedX className="h-10 w-10" />
         </button>
       )}
-    </div>)
+    </div>
   );
 }

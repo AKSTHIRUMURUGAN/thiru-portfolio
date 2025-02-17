@@ -13,7 +13,7 @@ export default function AnimatedPin({projects}) {
           key={index}
           title={card.title}
           href={card.href}
-          className="w-full flex-1 min-w-[250px] min-h-[350px]"
+          className="w-full flex-1 min-w-[250px] min-h-[350px] glassmorphism"
         >
           <div className="w-full h-full flex flex-col items-center text-center p-4 border border-white/[0.2] rounded-lg">
             {/* Image */}

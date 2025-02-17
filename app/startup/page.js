@@ -6,7 +6,14 @@ import PixelTransition from "../components/PixelTransition";
 const Startup = () => {
   return (
     <HeroHighlightEffect>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full h-full place-items-center p-7">
+      <div className="container w-full flex justify-center mt-12">
+  <p className="glitch">
+    <span aria-hidden="true">STARTUP</span>
+    STARTUP
+    <span aria-hidden="true">STARTUP</span>
+  </p>
+</div>
+      <div className="grid grid-cols-1 sm:grid-cols-4 gap-6 w-full h-full place-items-center p-2">
         {/* Startup Logo Section */}
         <PixelTransition
           firstContent={

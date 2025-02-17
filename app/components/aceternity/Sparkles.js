@@ -5,7 +5,7 @@ import { SparklesCore } from "../ui/sparkles";
 export default function Sparkles({children}) {
   return (
     (<div
-      className="h-full relative w-full bg-black flex flex-col justify-center overflow-hidden rounded-md">
+      className="h-full min-h-screen relative w-[100vw] bg-black flex flex-col justify-center overflow-hidden rounded-md">
       <div className="w-full absolute inset-0 h-full">
         <SparklesCore
           id="tsparticlesfullpage"

@@ -9,7 +9,7 @@ import {
 export default function TextRevealCardEffect() {
   return (
     (<div
-      className="flex items-center justify-center bg-[#0E0E10] h-[40rem] rounded-2xl w-full">
+      className="flex items-center justify-center  h-[40rem] rounded-2xl w-full z-10">
       <TextRevealCard text="You know the business" revealText="I know the chemistry ">
         <TextRevealCardTitle>
           Sometimes, you just need to see it.

@@ -19,6 +19,9 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+		fontFamily: {
+			hackathon: ["Abril Fatface", "serif"], // Create a Tailwind alias
+		  },
 		boxShadow: {
 			input: `0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08)`,
 		  },
@@ -72,7 +75,12 @@ const config: Config = {
   				'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
   				border: 'hsl(var(--sidebar-border))',
   				ring: 'hsl(var(--sidebar-ring))'
-  			}
+  			},
+			  "color-1": "hsl(var(--color-1))",
+			  "color-2": "hsl(var(--color-2))",
+			  "color-3": "hsl(var(--color-3))",
+			  "color-4": "hsl(var(--color-4))",
+			  "color-5": "hsl(var(--color-5))",
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
@@ -80,6 +88,40 @@ const config: Config = {
   			sm: 'calc(var(--radius) - 4px)'
   		},
   		keyframes: {
+			"aurora-border": {
+				"0%, 100%": { borderRadius: "37% 29% 27% 27% / 28% 25% 41% 37%" },
+				"25%": { borderRadius: "47% 29% 39% 49% / 61% 19% 66% 26%" },
+				"50%": { borderRadius: "57% 23% 47% 72% / 63% 17% 66% 33%" },
+				"75%": { borderRadius: "28% 49% 29% 100% / 93% 20% 64% 25%" },
+			  },
+			  "aurora-1": {
+				"0%, 100%": { top: "0", right: "0" },
+				"50%": { top: "50%", right: "25%" },
+				"75%": { top: "25%", right: "50%" },
+			  },
+			  "aurora-2": {
+				"0%, 100%": { top: "0", left: "0" },
+				"60%": { top: "75%", left: "25%" },
+				"85%": { top: "50%", left: "50%" },
+			  },
+			  "aurora-3": {
+				"0%, 100%": { bottom: "0", left: "0" },
+				"40%": { bottom: "50%", left: "25%" },
+				"65%": { bottom: "25%", left: "50%" },
+			  },
+			  "aurora-4": {
+				"0%, 100%": { bottom: "0", right: "0" },
+				"50%": { bottom: "25%", right: "40%" },
+				"90%": { bottom: "50%", right: "25%" },
+			  },
+			  "shiny-text": {
+				"0%, 90%, 100%": {
+				  "background-position": "calc(-100% - var(--shiny-width)) 0",
+				},
+				"30%, 60%": {
+				  "background-position": "calc(100% + var(--shiny-width)) 0",
+				},
+			  },
 			aurora: {
 				from: {
 				  backgroundPosition: "50% 50%, 50% 50%",
@@ -164,11 +206,27 @@ const config: Config = {
 				  transform: "translate(-50%,-40%) scale(1)",
 				},
 			  },
+			gradient: {
+            '0%': { backgroundPosition: '0% 50%' },
+            '50%': { backgroundPosition: '100% 50%' },
+            '100%': { backgroundPosition: '0% 50%' },
+          },
+		  "circling": {
+			"0%": {
+			  transform:
+				"rotate(calc(var(--offset) * 1deg)) translate(calc(var(--radius) * 1px), 0) rotate(calc(var(--offset) * -1deg))",
+			},
+			"100%": {
+			  transform:
+				"rotate(calc(360deg + (var(--offset) * 1deg))) translate(calc(var(--radius) * 1px), 0) rotate(calc(-360deg + (var(--offset) * -1deg)))",
+			},
+		  },
 		
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
   			'accordion-up': 'accordion-up 0.2s ease-out',
+			"shiny-text": "shiny-text 8s infinite",
 			 aurora: "aurora 60s linear infinite",
 			 move: "move 5s linear infinite",
 			 first: "moveVertical 30s ease infinite",
@@ -179,6 +237,8 @@ const config: Config = {
 			 scroll: "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
 			 'meteor-effect': "meteor 5s linear infinite",
 			 spotlight: "spotlight 2s ease .75s 1 forwards",
+			 gradient: 'gradient 8s linear infinite',
+			 "circling": "circling calc(var(--duration)*1s) linear infinite",
   		}
   	}
   },

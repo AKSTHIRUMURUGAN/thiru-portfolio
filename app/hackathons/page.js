@@ -4,6 +4,7 @@ import BackgroundBoxes from "../components/aceternity/BackgroundBoxes";
 import ThreeDCard from "../components/aceternity/Card";
 import LetterGlitch from '../components/GlitchBg'
 import Hackathonlist from '../components/aceternity/Hackathon'
+import DecryptedText from '../components/DecryptedText'
 
 const Hackathons= () => {
     const hackathons = [
@@ -43,6 +44,19 @@ const Hackathons= () => {
 
   return (
     <LetterGlitch >
+      <div className="w-full mt-16 ">
+      <DecryptedText
+  text="HACKATHONS"
+  speed={200}
+  animateOn="view"
+  revealDirection="start"
+  className="text-white text-4xl  sm:text-5xl font-extrabold  mx-auto drop-shadow-[2px_2px_0px_rgba(0,255,0,1)] tracking-widest"
+  encryptedClassName="text-white text-4xl sm:text-5xl font-extrabold drop-shadow-[0_0_15px_rgba(0,255,0,0.8)] tracking-wide"
+  parentClassName="flex justify-center items-center"
+/>
+
+
+</div>
       <Hackathonlist hackathons={hackathons} />
       </LetterGlitch>
   );
