@@ -2,7 +2,7 @@ import { FlickeringGrid } from "./ui/flickering-grid";
 
 export default function FlickeringGridEffect({ children }) {
   return (
-    <div className="relative min-h-screen h-full w-full overflow-hidden rounded-lg border bg-background">
+    <div className="relative min-h-screen h-full w-[100vw] overflow-hidden rounded-lg border bg-background">
       {/* Flickering Grid Background */}
       <FlickeringGrid
         className="absolute inset-0 z-0 size-full"
