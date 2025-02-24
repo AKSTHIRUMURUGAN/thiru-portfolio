@@ -76,7 +76,7 @@ const fragment = /* glsl */ `
 `;
 
 const Particles = ({
-  particleCount = 200,
+  particleCount = 2000,
   particleSpread = 10,
   speed = 0.1,
   particleColors,
@@ -226,7 +226,7 @@ const Particles = ({
   return (
     <div
       ref={containerRef}
-      className={`absolute top-0 w-full h-full ${className}`}
+      className={`absolute top-0 min-w-[100vw] w-full h-full ${className}`}
     >
         <div className="text-center bg-transparent">
         {children}

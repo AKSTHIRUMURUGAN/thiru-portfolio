@@ -1,7 +1,9 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import { Router } from "lucide-react";
 import { motion, MotionProps, type AnimationProps } from "motion/react";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const animationProps = {
@@ -30,13 +32,17 @@ interface ShinyButtonProps
     MotionProps {
   children: React.ReactNode;
   className?: string;
+  link?:string;
 }
 
 export const ShinyButton = React.forwardRef<
   HTMLButtonElement,
   ShinyButtonProps
->(({ children, className, ...props }, ref) => {
+>(({ children, className,link, ...props}, ref) => {
+  const router=useRouter();
   return (
+    <div className='w-full flex justify-center'>
+      <div className='w-fit'>
     <motion.button
       ref={ref}
       className={cn(
@@ -49,6 +55,7 @@ export const ShinyButton = React.forwardRef<
       )}
       {...animationProps}
       {...props}
+      onClick={()=>router.push(`/${link}`)}
     >
       {/* Text with Visible Contrast */}
       <span
@@ -71,6 +78,8 @@ export const ShinyButton = React.forwardRef<
         className="absolute inset-0 z-10 block rounded-[inherit] bg-[linear-gradient(-75deg,rgba(255,255,255,0.2)_calc(var(--x)+20%),rgba(255,255,255,0.8)_calc(var(--x)+25%),rgba(255,255,255,0.2)_calc(var(--x)+100%))] p-px"
       ></span>
     </motion.button>
+    </div>
+    </div>
   );
 });
 

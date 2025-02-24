@@ -39,8 +39,8 @@ export default function IconCloudEffect() {
   );
 
   return (
-    <div className="relative flex size-full items-center justify-center overflow-hidden z-10">
-        <div className="w-fit h-fit glassmorphism">
+    <div className="relative mb-5 flex  size-full items-center justify-center overflow-hidden z-10">
+        <div className="w-fit h-fit">
       <IconCloud images={images} />
       </div>
     </div>

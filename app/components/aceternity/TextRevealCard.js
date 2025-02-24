@@ -8,17 +8,15 @@ import {
 
 export default function TextRevealCardEffect() {
   return (
-    (<div
-      className="flex items-center justify-center  h-[40rem] rounded-2xl w-full z-10">
-      <TextRevealCard text="You know the business" revealText="I know the chemistry ">
+    <div className="flex items-center justify-center h-[20rem] rounded-2xl w-full z-50">
+      <TextRevealCard text="You know the business" revealText="I know the tech">
         <TextRevealCardTitle>
-          Sometimes, you just need to see it.
+          Innovation is my passion, collaboration is my strength.
         </TextRevealCardTitle>
         <TextRevealCardDescription>
-          This is a text reveal card. Hover over the card to reveal the hidden
-          text.
+          I believe in creating solutions that are not just functional but also impactful. Whether it’s through coding, mentoring, or leading teams, I strive to make a difference.
         </TextRevealCardDescription>
       </TextRevealCard>
-    </div>)
+    </div>
   );
 }

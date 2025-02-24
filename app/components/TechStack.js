@@ -37,8 +37,7 @@ const TechStack = () => {
   ];
 
   return (
-    <section className="py-12 px-4 z-10">
-      <h2 className="text-3xl font-bold text-center mb-8">Tech Stack</h2>
+    <section className="py-5 px-4 z-10">
       <div className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-8 gap-6 max-w-6xl mx-auto">
         {techStackItems.map((item, index) => (
           <motion.div

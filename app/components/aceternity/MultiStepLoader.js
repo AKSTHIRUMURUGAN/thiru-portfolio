@@ -4,8 +4,9 @@ import { MultiStepLoader } from "../ui/multi-step-loader";
 import { IconSquareRoundedX } from "@tabler/icons-react";
 import { useRouter } from "next/navigation";
 
-export default function MultiStepLoaderEffect({ loadingStates, text }) {
+export default function MultiStepLoaderEffect({ loadingStates, text,role }) {
   const [loading, setLoading] = useState(false);
+  
 
 
 
@@ -24,6 +25,7 @@ export default function MultiStepLoaderEffect({ loadingStates, text }) {
       <button
         onClick={() => { 
           setLoading(true); 
+          localStorage.setItem("role",role);
         }} 
         className="bg-[#39C3EF] hover:bg-[#39C3EF]/90 text-white mx-auto text-sm md:text-base transition font-medium duration-200 h-10 rounded-xl px-8"
         style={{
@@ -32,15 +34,6 @@ export default function MultiStepLoaderEffect({ loadingStates, text }) {
         }}>
         {text}
       </button>
-
-      {/* Close Button */}
-      {loading && (
-        <button
-          className="fixed top-4 right-4 text-white z-[120]"
-          onClick={() => setLoading(false)}>
-          <IconSquareRoundedX className="h-10 w-10" />
-        </button>
-      )}
     </div>
   );
 }

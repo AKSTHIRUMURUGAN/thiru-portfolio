@@ -1,18 +1,14 @@
-import React from 'react'
-import WarpBg from '../components/magicui/WrapBackground'
-import IconCloudEffect from '../components/magicui/IconCloud'
-import TypingAnimationEffect from '../components/magicui/TypinAnimation'
-import WordRotateEffect from '../components/magicui/WordRotate'
-import AboutMe from '../components/magicui/TextAnimate'
+"use client"
+import React from 'react';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
-
-const page = () => {
+const App = () => {
   return (
-    <>
-
-<AboutMe/>
-</>
-  )
-}
-
-export default page
+    <DotLottieReact
+      src="https://lottie.host/6fcb24f6-e0e8-4705-8131-248bb073de55/NlJU0g5RHj.lottie"
+      loop
+      autoplay
+    />
+  );
+};
+export default App;

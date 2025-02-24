@@ -41,7 +41,7 @@ export default function HeroScrollDemo() {
               {/* DESIGN A MASTERPIECE */}
             {/* </h1> */}
               Welcome to the world of<br />
-              <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
+              <span className="bg-gradient-to-b from-[#edeffd] to-[#06152e] bg-clip-text text-transparent leading-[100%] tracking-tighter text-4xl md:text-[6rem] font-bold mt-1 ">
                 THIRUMURUGAN 
               </span>
             </h1>
@@ -74,12 +74,12 @@ export default function HeroScrollDemo() {
    <div className="flex flex-col md:flex-row gap-6">
         {/* Visitor Card */}
         
-          <MultiStepLoaderEffect loadingStates={Visit} text={"Visitor  🌎"} />
+          <MultiStepLoaderEffect loadingStates={Visit} text={"Visitor  🌎"} role={"Visitor"} />
 
 
         {/* Hire Me Card */}
       
-          <MultiStepLoaderEffect loadingStates={Hire} text={"Hire  🎯"} />
+          <MultiStepLoaderEffect loadingStates={Hire} text={"Hire  🎯"} role={"Hire"} />
 
 
       </div>

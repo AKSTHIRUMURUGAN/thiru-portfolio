@@ -38,7 +38,7 @@ export const LampContainer = ({
     >
       <div className="relative flex w-full flex-1 scale-y-125 items-center justify-center isolate z-0 ">
         <motion.div
-          initial={{ opacity: 0.5, width: "20vw" }}
+          initial={{ opacity: 0.5, width: "20vw"  }}
           whileInView={{ opacity: 1, width: "40vw" }}
           transition={{
             delay: 0.3,
@@ -54,7 +54,7 @@ export const LampContainer = ({
           <div className="absolute  w-[10vw] h-[100%] left-0 bg-slate-950  bottom-0 z-20 [mask-image:linear-gradient(to_right,white,transparent)]" />
         </motion.div>
         <motion.div
-          initial={{ opacity: 0.5, width: "20vw" }}
+          initial={{ opacity: 0.5, width: "20vw"}}
           whileInView={{ opacity: 1, width: "40vw" }}
           transition={{
             delay: 0.3,
@@ -98,6 +98,7 @@ export const LampContainer = ({
 
       <div className="relative z-50 flex -translate-y-80 flex-col items-center px-5">
         {children}
+        
       </div>
     </div>
   );
