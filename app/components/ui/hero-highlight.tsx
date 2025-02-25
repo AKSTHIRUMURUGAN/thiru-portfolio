@@ -30,7 +30,7 @@ export const HeroHighlight = ({
   return (
     <div
       className={cn(
-        "relative h-full bg-black  w-[100vw] group overflow-hidden",
+        "relative h-full bg-black  min-w-[100vw] w-full group overflow-hidden",
         containerClassName
       )}
       onMouseMove={handleMouseMove}

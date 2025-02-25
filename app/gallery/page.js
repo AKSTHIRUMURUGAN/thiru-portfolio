@@ -10,7 +10,7 @@ import MovingBorderEffect from '../components/aceternity/MovingBorder'
 
 const Page = () => {
   return (
-    <div className="relative top-0 left-0 min-h-screen min-w-full h-full bg-transparent">
+    <div className="relative top-0 left-0 min-h-screen min-w-[100vw] w-full h-full bg-transparent">
       {/* Particles Background */}
       <Particles
         particleColors={["#ffffff", "#ffffff"]}
