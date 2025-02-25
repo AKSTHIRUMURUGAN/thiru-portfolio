@@ -21,7 +21,7 @@ import { Button } from "../components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
 import { cn } from "@/lib/utils";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
-
+import Image from "next/image";
 const About = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [role, setRole] = useState("Visitor"); // Default role
@@ -65,7 +65,7 @@ const About = () => {
       </div>
 
       {/* Section 2: Hero Section with AuroraText and WordRotate */}
-      <div className="text-center">
+      <div className="text-center my-2">
         <h1 className="text-5xl font-bold md:text-7xl bg-black">
           <AuroraText>A.K.S. Thirumurugan</AuroraText>
         </h1>
@@ -79,68 +79,81 @@ const About = () => {
       </div>
 
       {/* Section 3: About Section with FlipText and Dynamic Content */}
-      <Card className="mt-10 max-w-3xl mx-auto bg-white/10 backdrop-blur-md rounded-lg p-6">
-        <CardHeader>
-          <CardTitle className="text-4xl font-bold">
-            <FlipText
-              className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500"
-              word="About Me"
-            />
-          </CardTitle>
-        </CardHeader>
-        <CardContent className="text-lg text-gray-300">
-          {role === "Hire" ? (
-            <>
-              <TextAnimate animation="blurIn" by="word" delay={0.2} duration={0.5}>
-                I am a dedicated and versatile professional with expertise in full-stack development, robotics, IoT, and digital marketing. Currently pursuing a Bachelor of Engineering in Robotics and Automation at Rajalakshmi Engineering College, I have a strong foundation in both software and hardware development.
-              </TextAnimate>
-              <TextAnimate animation="slideUp" by="word" delay={0.4} duration={0.5} className="mt-4">
-                <span className="font-semibold text-white">Core Skills & Expertise:</span>
-                <br />
-                ✔ Full-Stack Development: HTML, CSS, Tailwind CSS, JavaScript, React, Next.js, MongoDB, Express.js
-                <br />
-                ✔ Programming Languages: C, C++, Java, Python, C#
-                <br />
-                ✔ Game & 3D Development: Unity, Blender
-                <br />
-                ✔ Cybersecurity & Blockchain: Basic security principles, decentralized systems
-                <br />
-                ✔ Digital Marketing & Branding: Video editing, poster/logo design, content creation, strategic marketing
-              </TextAnimate>
-              <TextAnimate animation="fadeIn" by="line" delay={0.6} duration={0.5} className="mt-4">
-                <span className="font-semibold text-white">Why Choose Me?</span>
-                <br />
-                ✔ Innovative Thinking: I approach challenges with a creative, solution-driven mindset.
-                <br />
-                ✔ Continuous Learning: I stay updated with the latest technologies and trends.
-                <br />
-                ✔ Collaboration & Communication: I work seamlessly with diverse teams, ensuring efficiency and success.
-                <br />
-                ✔ Adaptability: I have experience across multiple domains, making me a valuable asset in various roles.
-              </TextAnimate>
-            </>
-          ) : (
-            <>
-              <TextAnimate animation="blurInUp" by="word" delay={0.2} duration={0.5}>
-                 Hey there! I’m Aks Thirumurugan!
-              </TextAnimate>
-              <TextAnimate animation="slideUp" by="word" delay={0.4} duration={0.5} className="mt-4">
-                I’m a tech enthusiast, problem solver, and lifelong learner currently pursuing my 3rd year in Robotics and Automation Engineering at Rajalakshmi Engineering College. I love exploring new technologies, participating in hackathons, and building innovative projects that solve real-world problems.
-              </TextAnimate>
-              <TextAnimate animation="fadeIn" by="line" delay={0.6} duration={0.5} className="mt-4">
-                I’ve dived into full-stack development, game development, cybersecurity, and digital marketing—because why limit myself to just one field? From coding in C, C++, Python, Java, and C# to designing in Blender and Unity, I enjoy creating things that make an impact.
-              </TextAnimate>
-              <TextAnimate animation="slideLeft" by="character" delay={0.8} duration={0.5} className="mt-4">
-                When I’m not coding, you’ll find me brainstorming crazy ideas with my team TechBuddy, networking with like-minded people, or helping friends understand complex concepts (because I love teaching too!).
-              </TextAnimate>
-              <TextAnimate animation="scaleUp" by="text" delay={1.0} duration={0.5} className="mt-4">
-                I believe in stepping out of my comfort zone,  
-              </TextAnimate>
-              taking up every challenge that comes my way, and growing together with my team. Whether it’s hackathons, projects, or startups, I’m always ready to contribute, collaborate, and innovate!
-            </>
-          )}
-        </CardContent>
-      </Card>
+      <div className="w-full flex flex-col-reverse justify-evenly align-middle sm:flex-row  items-center gap-4">
+  <Card className="mt-10 w-[90vw] md:w-[60vw] mx-auto bg-white/10 backdrop-blur-md rounded-lg p-6">
+    <CardHeader>
+      <CardTitle className="text-4xl font-bold">
+        <FlipText
+          className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500"
+          word="About Me"
+        />
+      </CardTitle>
+    </CardHeader>
+    <CardContent className="text-lg text-gray-300">
+      {role === "Hire" ? (
+        <>
+          <TextAnimate animation="blurIn" by="line" delay={0.2} duration={0.5}>
+            I am a dedicated and versatile professional with expertise in full-stack development, robotics, IoT, and digital marketing. Currently pursuing a Bachelor of Engineering in Robotics and Automation at Rajalakshmi Engineering College, I have a strong foundation in both software and hardware development.
+          </TextAnimate>
+          <TextAnimate animation="slideUp" by="line" delay={0.4} duration={0.5} className="mt-4">
+            Core Skills & Expertise:
+          </TextAnimate>
+          <br />
+          1 Full-Stack Development: HTML, CSS, Tailwind CSS, JavaScript, React, Next.js, MongoDB, Express.js
+          <br />
+          2 Programming Languages: C, C++, Java, Python, C#
+          <br />
+          3 Game & 3D Development: Unity, Blender
+          <br />
+          4 Cybersecurity & Blockchain: Basic security principles, decentralized systems
+          <br />
+          5 Digital Marketing & Branding: Video editing, poster/logo design, content creation, strategic marketing
+
+          <TextAnimate animation="fadeIn" by="line" delay={0.6} duration={0.5} className="mt-4">
+            Why Choose Me?
+          </TextAnimate>
+          <br />
+          1 Innovative Thinking: I approach challenges with a creative, solution-driven mindset.
+          <br />
+          2 Continuous Learning: I stay updated with the latest technologies and trends.
+          <br />
+          3 Collaboration & Communication: I work seamlessly with diverse teams, ensuring efficiency and success.
+          <br />
+          4 Adaptability: I have experience across multiple domains, making me a valuable asset in various roles.
+        </>
+      ) : (
+        <>
+          <TextAnimate animation="blurInUp" by="word" delay={0.2} duration={0.5}>
+            Hey there! I’m Aks Thirumurugan!
+          </TextAnimate>
+          <TextAnimate animation="slideUp" by="word" delay={0.4} duration={0.5} className="mt-4">
+            I’m a tech enthusiast, problem solver, and lifelong learner currently pursuing my 3rd year in Robotics and Automation Engineering at Rajalakshmi Engineering College. I love exploring new technologies, participating in hackathons, and building innovative projects that solve real-world problems.
+          </TextAnimate>
+          <TextAnimate animation="fadeIn" by="line" delay={0.6} duration={0.5} className="mt-4">
+            I’ve dived into full-stack development, game development, cybersecurity, and digital marketing—because why limit myself to just one field? From coding in C, C++, Python, Java, and C# to designing in Blender and Unity, I enjoy creating things that make an impact.
+          </TextAnimate>
+          <TextAnimate animation="slideLeft" by="character" delay={0.8} duration={0.5} className="mt-4">
+            When I’m not coding, you’ll find me brainstorming crazy ideas with my team TechBuddy, networking with like-minded people, or helping friends understand complex concepts (because I love teaching too!).
+          </TextAnimate>
+          <TextAnimate animation="scaleUp" by="text" delay={1.0} duration={0.5} className="mt-4">
+            I believe in stepping out
+          </TextAnimate>
+          of my comfort zone,  taking up every challenge that comes my way, and growing together with my team. Whether it’s hackathons, projects, or startups, I’m always ready to contribute, collaborate, and innovate!
+         
+        </>
+      )}
+    </CardContent>
+  </Card>
+  <div className="w-fit h-fit  overflow-hidden">
+      <Image
+      src={"./Thiru.png"}
+      width={400}
+      height={400}
+      alt='photo'
+      className='img'
+      />
+  </div>
+</div>
 
       {/* Section 4: TimelineEffect - Education, Internships, Clubs */}
       <div className="mt-10">
@@ -151,9 +164,9 @@ const About = () => {
       </div>
 
       {/* Section 5: TextRevealCardEffect - Core Philosophy */}
-      <div className="mt-10">
+      {/* <div className="mt-10">
         <TextRevealCardEffect />
-      </div>
+      </div> */}
 
       {/* Section 6: TechStack or IconCloudEffect - Skills Showcase */}
       <div className="mt-10">
@@ -164,7 +177,7 @@ const About = () => {
       </div>
 
       {/* Section 7: Contact & Social Links */}
-      <div className="mt-10 flex flex-col items-center">
+      <div className="my-10 flex flex-col items-center">
         <h2 className="text-4xl font-bold">
           <TextAnimate animation="blurIn" by="word" delay={0.2} duration={0.5}>
             📩 Get in Touch
@@ -205,9 +218,7 @@ const About = () => {
       </div>
 
       {/* Footer */}
-      <footer className="mt-10 text-gray-500 text-sm text-center">
-        <SparklesText text="Made with ❤️ by A.K.S. Thirumurugan" />
-      </footer>
+
     </ShootingStarsAndStarsBackground>
   );
 };

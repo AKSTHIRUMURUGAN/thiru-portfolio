@@ -33,15 +33,15 @@ export default function TimelineEffect() {
               - Delivered a fully functional, error-free solution under tight deadlines.
             </p>
           </div>
-          <div className="w-[10vw] h-[30vh]">
-          <Image
-              src="./internship/fly91.jpg"
-              alt="fly91"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-fit w-full shadow-lg hover:scale-105 transition-transform"
-            />
-            </div>
+          <div className="w-full max-w-[500px] mx-auto">
+  <Image
+    src="./internship/fly91.jpg"
+    alt="fly91"
+    width={500}
+    height={500}
+    className="rounded-lg object-cover w-full h-auto shadow-lg hover:scale-105 transition-transform"
+  />
+</div>
           <div className="p-4 bg-neutral-800/10 dark:bg-neutral-200/10 rounded-lg hover:shadow-lg transition-shadow">
             <p className="text-neutral-200 text-xs md:text-sm font-normal">
               🌟 <strong>eTLSID Project</strong> - DST Funded (Rajalakshmi Engineering College)
@@ -58,7 +58,7 @@ export default function TimelineEffect() {
             </p>
           </div>
      
-          <div className="w-[20vw] h-[15vh]">
+          <div className="w-full max-w-[500px] mx-auto">
           <Image
               src="./internship/etlsid.png"
               alt="fly91"
