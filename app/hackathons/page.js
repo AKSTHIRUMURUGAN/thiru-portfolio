@@ -68,7 +68,7 @@ const Hackathons= () => {
           author: "Nit Calicut",
           title: "Hack 4 Good",
           description: "Explore the power of Web3, DeFi, and Smart Contracts in this hackathon.",
-          image: "/hackathon/h4g.jpg",
+          image: "/hackathon/hfg.jpg",
           link: "/hackathon/web3-revolution",
           authorAvatar: "https://source.unsplash.com/50x50/?crypto",
         },

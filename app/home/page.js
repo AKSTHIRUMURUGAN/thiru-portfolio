@@ -21,30 +21,29 @@ const page = () => {
   const router=useRouter();
   const awards = [
     {
-      imageSrc: "https://l653gm296w.ufs.sh/f/dFnzg2mKvQrJlElUI7092EKtm30TR8c6pNCjdqPzw1if5BQH",
+      imageSrc: "/awards/college/cybrom.jpg",
+      title: "Runner up",
+      description: ",National level hackathon-Bhopal,oist",
+      link: "#",
+    },
+    {
+      imageSrc: "/awards/college/datasprintwon.jpg",
       title: "First Price",
-      description: "Puratchiyalar virudhu",
+      description: "Data sprint 2.0",
       link: "#",
     },
     {
-      imageSrc: "https://l653gm296w.ufs.sh/f/dFnzg2mKvQrJlElUI7092EKtm30TR8c6pNCjdqPzw1if5BQH",
-      title: "Second Price",
-      description: "Best Innovation Award",
+      imageSrc: "/awards/college/hackmageddonsp.jpg",
+      title: "Special Prize",
+      description: "Hackmageddon",
       link: "#",
     },
     {
-      imageSrc: "https://l653gm296w.ufs.sh/f/dFnzg2mKvQrJlElUI7092EKtm30TR8c6pNCjdqPzw1if5BQH",
-      title: "Third Price",
-      description: "Community Excellence Award",
+      imageSrc: "/awards/college/devshackathon.jpg",
+      title: "Winner",
+      description: "DevFest",
       link: "#",
     },
-    {
-      imageSrc: "https://l653gm296w.ufs.sh/f/dFnzg2mKvQrJlElUI7092EKtm30TR8c6pNCjdqPzw1if5BQH",
-      title: "Third Price",
-      description: "Community Excellence Award",
-      link: "#",
-    },
-    // Add more cards as needed
   ];
     const projects = [
       {
@@ -55,25 +54,25 @@ const page = () => {
           "TechBuddySpace is an edutech startup featuring theme-based animations, AOS, and glassmorphism.",
       },
       {
-        title: "TechBuddy Space",
-        href: "https://techbuddyspace.xyz",
-        imageSrc: "/projects/tbspace.png",
+        title: "My Portfolio",
+        href: "https://www.thirumuruganaks.me/",
+        imageSrc: "/projects/portfolio.png",
         description:
-          "TechBuddySpace is an edutech startup featuring theme-based animations, AOS, and glassmorphism.",
+          "This is my portfolio",
       },
       {
-        title: "TechBuddy Space",
-        href: "https://techbuddyspace.xyz",
-        imageSrc: "/projects/tbspace.png",
+        title: "Parkwiz",
+        href: "https://parkwiz.vercel.app/",
+        imageSrc: "/projects/parkwiz.png",
         description:
-          "TechBuddySpace is an edutech startup featuring theme-based animations, AOS, and glassmorphism.",
+          "One stop solution for parking",
       },
       {
-        title: "TechBuddy Space",
-        href: "https://techbuddyspace.xyz",
-        imageSrc: "/projects/tbspace.png",
+        title: "Thiru Cart",
+        href: "https://thirucart.netlify.app/",
+        imageSrc: "/projects/thiru_cart.png",
         description:
-          "TechBuddySpace is an edutech startup featuring theme-based animations, AOS, and glassmorphism.",
+          "This is my ecommerce website",
       },
     ];
     const texts = [

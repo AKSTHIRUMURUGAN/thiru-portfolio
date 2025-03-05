@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React,{useState,useEffect} from "react";
 import Particles from "../components/ParticlesBg";
 import RollingGallery from '../components/RollingGallery'
 import TiltedCardStack from '../components/TiltedCardStack'
@@ -9,6 +9,11 @@ import CarouselEffect from '../components/aceternity/NewCarousel'
 import MovingBorderEffect from '../components/aceternity/MovingBorder'
 
 const Page = () => {
+    const [role, setRole] = useState("Visitor"); // Default role
+      useEffect(() => {
+        const storedRole = localStorage.getItem("role") || "Visitor";
+        setRole(storedRole);
+      }, []);
   return (
     <div className="relative top-0 left-0 min-h-screen min-w-[100vw] w-full h-full bg-transparent">
       {/* Particles Background */}
@@ -87,7 +92,9 @@ const Page = () => {
       <div className="mt-[70vh]">
       <CarouselEffect/>
       <FocusCardEffect/>
-      <TiltedCardStack/>
+      {role === "Hire" ?null:(
+        
+      <TiltedCardStack/>)}
       </div>
       
 
