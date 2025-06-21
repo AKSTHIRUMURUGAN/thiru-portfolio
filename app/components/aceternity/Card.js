@@ -3,8 +3,6 @@
 import Image from "next/image";
 import React from "react";
 import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
-import Link from "next/link";
-
 
 
 export default function ThreeDCard({cardData}) {
@@ -32,16 +30,6 @@ export default function ThreeDCard({cardData}) {
             >
               {card.description}
             </CardItem>
-
-            <div className="flex justify-center items-center mt-10">
-              <CardItem
-                translateZ={20}
-                as="button"
-                className="px-4 py-2 rounded-xl bg-white text-black text-xs font-bold"
-              >
-                <Link href={card.link}>More Details</Link>
-              </CardItem>
-            </div>
           </CardBody>
         </CardContainer>
       ))}

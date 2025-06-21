@@ -8,152 +8,132 @@ import WarpBg from '../components/magicui/WrapBackground'
 const page = () => {
   const projects = [
     {
-      title: "TechBuddy Space",
+      title: "TechBuddy Space - Peer-Learning Platform",
       href: "https://techbuddyspace.xyz",
       imageSrc: "/projects/tbspace.png",
-      description:
-        "TechBuddySpace is an edutech startup featuring theme-based animations, AOS, and glassmorphism.",
+      description: "Theme-based peer learning platform using AOS animations and glassmorphism UI for immersive tech education.",
     },
     {
-      title: "My Portfolio",
+      title: "Professional Portfolio",
       href: "https://www.thirumuruganaks.me/",
       imageSrc: "/projects/portfolio.png",
-      description:
-        "This is my portfolio",
+      description: "Creative personal portfolio showcasing skills, projects, and professional milestones with modern UI design.",
     },
     {
-      title: "Parkwiz",
+      title: "ParkWiz - Smart Parking Solution",
       href: "https://parkwiz.vercel.app/",
       imageSrc: "/projects/parkwiz.png",
-      description:
-        "One stop solution for parking",
+      description: "Smart parking system with real-time updates, digital booking, and secure payment features.",
     },
     {
-      title: "Thiru Cart",
+      title: "Nourish Net - Food Redistribution",
+      href: "https://nouris-net-v1.vercel.app/",
+      imageSrc: "/projects/nn.png",
+      description: "Connects donors and receivers to reduce food waste and combat hunger through a social platform.",
+    },
+    {
+      title: "Thiru Cart - E-commerce Platform",
       href: "https://thirucart.netlify.app/",
       imageSrc: "/projects/thiru_cart.png",
-      description:
-        "This is my ecommerce website",
+      description: "Fully responsive MERN-based e-commerce website with all essential shopping and payment functionalities.",
     },
-
     {
-      title: "ClubHub",
+      title: "ClubHub - Event Management",
       href: "https://clubhubdevs.vercel.app/",
       imageSrc: "/projects/clubhub.png",
-      description:
-        "It is one stop solution , to organise all club events",
+      description: "Central hub to manage, track, and discover all university club events and activities efficiently.",
     },
     {
-      title: "Drug Valve",
+      title: "DrugValve - Pharmacy Network",
       href: "https://drugvalve.vercel.app/",
       imageSrc: "/projects/drugvalve.png",
-      description:
-        "It is the project which connects patient, pharmacy,warehouse.",
+      description: "Pharmacy ecosystem streamlining medicine delivery across patients, pharmacies, and warehouses.",
     },
     {
-      title: "ETLSID-Landing Page",
+      title: "ETLSID - Multilingual Learning Platform",
       href: "https://etlsid.netlify.app/",
       imageSrc: "/projects/etlsid_lp.png",
-      description:
-        " - Developed a gamified learning platform for intellectually disabled students.",
+      description: "Gamified education for disabled students, supporting multiple languages and interactive learning tools.",
     },
     {
-      title: "ETLSID-English",
+      title: "ETLSID - English Version",
       href: "https://etlsidrec.vercel.app/",
       imageSrc: "/projects/etlsid.png",
-      description:
-        " - Developed a gamified learning platform for intellectually disabled students.",
+      description: "English interface of ETLSID offering engaging educational games for special needs learners.",
     },
     {
-      title: "ETLSID-Tamil",
+      title: "ETLSID - Tamil Version",
       href: "https://etlsidrectamil.vercel.app/",
       imageSrc: "/projects/etlsid_tamil.png",
-      description:
-        " - Developed a gamified learning platform for intellectually disabled students.",
+      description: "Tamil version of the ETLSID platform with localized educational games and visual learning aids.",
     },
     {
-      title: "ETLSID-Hindi",
+      title: "ETLSID - Hindi Version",
       href: "https://etlsidrechindi.vercel.app/",
       imageSrc: "/projects/etlsid_hindi.png",
-      description:
-        " - Developed a gamified learning platform for intellectually disabled students.",
+      description: "Hindi version of ETLSID providing inclusive learning tools for intellectually disabled students.",
     },
     {
-      title: "Botsha 2024",
+      title: "BOTSHA 2024 - Robotics Symposium",
       href: "https://botsha.netlify.app/",
       imageSrc: "/projects/botsha.png",
-      description:
-        "Botsha is the national level symposium conducted by the department Robotics & Autmation",
+      description: "Event site for a national robotics symposium hosted by Rajalakshmi Engineering College.",
     },
     {
-      title: "Thiru Portfolio 3d Clone",
+      title: "3D Portfolio Clone",
       href: "https://thiruportfolio.netlify.app/",
       imageSrc: "/projects/portfolio_clone.png",
-      description:
-        "This is also a challange taken from frontend mentor,Product review card responsive for moile and desktop.",
+      description: "3D portfolio built with React Three Fiber, inspired by JS Mastery's modern web animations.",
     },
     {
-      title: "Result Summary",
+      title: "Result Summary Component",
       href: "https://ressum.vercel.app/",
       imageSrc: "/projects/ressum.png",
-      description:
-        "Take a challage from fronted-mentor and do a result summary page.",
+      description: "Frontend Mentor challenge: Summary UI card with responsive layout and clean data display.",
     },
     {
-      title: "Product Review Card",
+      title: "Perfume Product Card",
       href: "https://prc-1.netlify.app/",
       imageSrc: "/projects/prc.png",
-      description:
-        "This is also a challange taken from frontend mentor,Product review card responsive for moile and desktop.",
+      description: "Elegant Chanel perfume card UI designed for Frontend Mentor’s beginner-level challenge.",
     },
     {
-      title: "NFT Card",
+      title: "NFT Preview Card",
       href: "https://nft-preview-card-1.netlify.app/",
       imageSrc: "/projects/nft_card.png",
-      description:
-        "This is also a challange taken from frontend mentor,Product review card responsive for moile and desktop.",
+      description: "Frontend Mentor challenge: NFT collectible preview with hover effects and clean layout.",
     },
     {
       title: "Interactive Rating Component",
       href: "https://interactive-rating-component-1.netlify.app/",
       imageSrc: "/projects/irc.png",
-      description:
-        "This is also a challange taken from frontend mentor,Product review card responsive for moile and desktop.",
+      description: "Simple feedback rating system built with HTML, CSS, and JavaScript (Frontend Mentor challenge).",
     },
     {
-      title: "Order Summary Card",
+      title: "Order Summary Component",
       href: "https://order-summary-component-1-new.netlify.app/",
       imageSrc: "/projects/osc.png",
-      description:
-        "This is also a challange taken from frontend mentor,Product review card responsive for moile and desktop.",
+      description: "Responsive subscription summary card challenge with modern layout and call-to-action design.",
     },
-    
     {
-      title: "Status Preview Card",
+      title: "Stats Preview Card",
       href: "https://starus-preview-card.netlify.app/",
       imageSrc: "/projects/spc.png",
-      description:
-        "This is also a challange taken from frontend mentor,Product review card responsive for moile and desktop.",
+      description: "Analytics preview component highlighting key data metrics with elegant, responsive design.",
     },
-
     {
-      title: "Parkveu Location (testing)",
+      title: "ParkVeu - Location Testing",
       href: "https://parkveulocation.netlify.app/",
       imageSrc: "/projects/pvl.png",
-      description:
-        "It is the first step to testing location, part of parkveu it is only for testing purpose",
+      description: "Prototype testing location tracking for navigation within smart parking management systems.",
     },
-
     {
-      title: "Tech Buddy Space (Initial..)",
+      title: "TechBuddy Space - Prototype",
       href: "https://techbuddyspace.netlify.app/",
       imageSrc: "/projects/tbs.png",
-      description:
-        "It is a edutech start up,sample page",
-    },
-   
-    
-  ];
+      description: "Initial animated version of TechBuddy platform with experimental themes and transitions.",
+    }
+  ];  
   return (
     // <Squares 
     // speed={0.5} 
